@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS test_spring;
+
+USE test_spring;
+
+CREATE TABLE employees (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    birthday DATE NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    position VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL
+);
+
+
+
+INSERT INTO employees (full_name, birthday, address, position, department)
+VALUES
+('Nguyen Van Truong', '2004-02-28', '28 LL ND SL, VP', 'Software Engineer', 'dev'),
+('Luong The Vinh', '1995-06-22', '23 TX HN ', 'Product Manager', 'dev op'),
+('Do Thi Lan', '2004-07-11', '11 HL SL , VP', 'Fshop Engineer', 'Test '),
+('Ha Van Hiep', '2003-11-25', '15 BV HN', 'Software Engineer', 'dev'),
+('Trinh Van Phuc', '2000-09-25', '99 GB BN, BN', 'Fshop Engineer', 'dev');
+SELECT * FROM employees;
+
+
+
